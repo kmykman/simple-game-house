@@ -17,7 +17,7 @@ There are 10 game rooms in total.  Players need to input correct username and pa
 - if client A initially in waiting stage, client A disconnects and client B enters that room at the same time, server will let client B enters and start the game, but it treats client B as winner because client A disconnects
 - in playing game stage, client can input `/guess true` or `/guess True` (both capital letter or small letter of `true` and `false` is accepted)
 ## Usage
-- Prepare player information file to store the login information of players (use `UserInfo.txt` as an example)
+- Prepare player information file to store the login information of players (use `UserInfo.txt` as an example, format is `<user name>:<password>`)
 - Open GameServer before opening GameClient
 
 #### GameServer
