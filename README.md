@@ -17,6 +17,8 @@ There are 10 game rooms in total.  Players need to input correct username and pa
 - if client A initially in waiting stage, client A disconnects and client B enters that room at the same time, server will let client B enters and start the game, but it treats client B as winner because client A disconnects
 - in playing game stage, client can input `/guess true` or `/guess True` (both capital letter or small letter of `true` and `false` is accepted)
 ## Usage
+- Prepare `UserInfo.txt` to store the login information of players
+- Open GameServer before opening GameClient
 
 #### GameServer
 ```
@@ -42,6 +44,19 @@ For example
 ```
 python3 GameClient.py localhost 12345
 ```
+After `1001 Authentication successful` is shown, player can enter
+`/list`: to show number of player in each room
+Output
+```
+3001 <no. of room> <no. of player in each room>
+```
+For example
+```
+3001 10 1 0 0 0 0 0 0 0 0 2
+```
+means in 10 game rooms, room 1 has 1 player and room 10 has 2 players
+
+`/enter <room number (1-10)>`: to enter game room
 
 ## Input assumptions
 - User does not enter name with space when login
@@ -68,7 +83,7 @@ Bob /list
 ```
 ## Client output
 - basic ouputs are same as assignment document
-when Ctrl-C is pressed to terminate client
+when `Ctrl-C` is pressed to terminate client
 ```
 Keyboard Interrupt
 ```
