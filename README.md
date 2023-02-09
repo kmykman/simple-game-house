@@ -92,3 +92,5 @@ when server disconnected
 Error : <socket error or exception message>
 Server disconnected unexpectedly
 ```
+
+Copyright 2022 Man Yuet Ki Kimmy
